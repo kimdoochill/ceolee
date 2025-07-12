@@ -1,0 +1,378 @@
+@font-face {
+  font-family: "Hurmit";
+  src: url("../font/Hurmit_medium.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hurmit";
+}
+
+body {
+  background: #000;
+  color: #a1a1a1;
+}
+body[lock] {
+  height: 100vh;
+  overflow: hidden;
+}
+
+label, input, select, button {
+  display: block;
+  width: 100%;
+}
+
+input, select, button {
+  font-size: 1em;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  border: 1px solid #35363a;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
+}
+input:last-child, select:last-child, button:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  margin-bottom: 0.25em;
+  margin-left: 0.25em;
+}
+
+input, select {
+  background: #202124;
+  color: #ffffff;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+  background: #FFD700;
+  color: #000;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+[white] {
+  color: #ffffff;
+}
+
+[gold] {
+  color: #FFD700;
+}
+
+[text-align-center] {
+  text-align: center;
+}
+
+header {
+  -webkit-position: sticky;
+  -moz-position: sticky;
+  -ms-position: sticky;
+  -o-position: sticky;
+  position: sticky;
+  top: 0;
+  padding: 1em;
+  text-align: center;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 1003;
+}
+header div[clock] {
+  width: 100%;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+header div[clock] > div {
+  display: inline-block;
+}
+
+body > div[title] {
+  padding: 1em;
+}
+body > div[title] div[wrap] {
+  text-align: center;
+}
+body > div[title] div[wrap] h1 {
+  color: #ffffff;
+  font-size: 2em;
+}
+
+main {
+  margin: 5em 0;
+}
+main[store] {
+  margin-top: 0;
+}
+
+main > section {
+  margin-bottom: 5em;
+  padding: 1em;
+}
+main > section:last-child {
+  margin-bottom: 0;
+}
+main > section div[header] {
+  text-align: center;
+  margin-bottom: 1em;
+}
+main > section div[header] h2 span[count] {
+  font-size: 0.8em;
+}
+main > section div[body] article > div[wrap] {
+  margin-bottom: 1em;
+}
+main > section div[body] article > div[wrap]:last-child {
+  margin-bottom: 0;
+}
+main > section div[body] article > div[wrap] ol,
+main > section div[body] article > div[wrap] ul {
+  margin-left: 2em;
+}
+main > section div[body] article > div[wrap] ol li a,
+main > section div[body] article > div[wrap] ul li a {
+  color: #FFD700;
+}
+
+main > section[calculator] div[body] form {
+  background: #202124;
+  max-width: 700px;
+  margin: auto;
+  padding: 2em 1em;
+  border: 1px solid #35363a;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 5px rgba(255, 215, 0, 0.1);
+}
+main > section[calculator] div[body] form button {
+  margin-top: 2em;
+}
+
+main > section[video-cover] {
+  position: relative;
+  height: 50vh;
+  position: relative;
+}
+main > section[video-cover] video {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+main > section[video-cover] > div[black] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+main > section[video-cover] > div[content] {
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main > section[video-cover] > div[content] h1, main > section[video-cover] > div[content] h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+main > section[video-cover] > div[content] a {
+  display: block;
+  padding: 1em;
+  border: 1px solid #FFD700;
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+  color: #ffffff;
+}
+main > section[video-cover] > div[content] a:hover {
+  background: #FFD700;
+  color: #000;
+}
+
+main > section[event] div[body],
+main > section[business-hours] div[body],
+main > section[price] div[body],
+main > section[stores] div[body] {
+  text-align: center;
+  padding: 1em;
+}
+main > section[event] div[body] > div[list],
+main > section[business-hours] div[body] > div[list],
+main > section[price] div[body] > div[list],
+main > section[stores] div[body] > div[list] {
+  display: inline-block;
+  text-align: left;
+}
+main > section[event] div[body] > div[list] > ul,
+main > section[business-hours] div[body] > div[list] > ul,
+main > section[price] div[body] > div[list] > ul,
+main > section[stores] div[body] > div[list] > ul {
+  list-style: none;
+}
+main > section[event] div[body] > div[list] > ul li,
+main > section[business-hours] div[body] > div[list] > ul li,
+main > section[price] div[body] > div[list] > ul li,
+main > section[stores] div[body] > div[list] > ul li {
+  padding-left: 1em;
+  border-left: 1px solid #FFD700;
+  margin-bottom: 1em;
+}
+main > section[event] div[body] > div[list] > ul li:last-child,
+main > section[business-hours] div[body] > div[list] > ul li:last-child,
+main > section[price] div[body] > div[list] > ul li:last-child,
+main > section[stores] div[body] > div[list] > ul li:last-child {
+  margin-bottom: 0;
+}
+main > section[event] div[body] > div[list] > ul li h3,
+main > section[business-hours] div[body] > div[list] > ul li h3,
+main > section[price] div[body] > div[list] > ul li h3,
+main > section[stores] div[body] > div[list] > ul li h3 {
+  color: #ffffff;
+}
+main > section[event] div[body] > div[list] > ul li span[key],
+main > section[business-hours] div[body] > div[list] > ul li span[key],
+main > section[price] div[body] > div[list] > ul li span[key],
+main > section[stores] div[body] > div[list] > ul li span[key] {
+  color: #ffffff;
+}
+main > section[event] div[body] > div[list] > ul li span[value],
+main > section[business-hours] div[body] > div[list] > ul li span[value],
+main > section[price] div[body] > div[list] > ul li span[value],
+main > section[stores] div[body] > div[list] > ul li span[value] {
+  color: #FFD700;
+}
+main > section[event] div[body] > div[list] > ul li span[value][green],
+main > section[business-hours] div[body] > div[list] > ul li span[value][green],
+main > section[price] div[body] > div[list] > ul li span[value][green],
+main > section[stores] div[body] > div[list] > ul li span[value][green] {
+  color: #99d48f;
+}
+main > section[event] div[body] > div[list] > ul li span[value][red],
+main > section[business-hours] div[body] > div[list] > ul li span[value][red],
+main > section[price] div[body] > div[list] > ul li span[value][red],
+main > section[stores] div[body] > div[list] > ul li span[value][red] {
+  color: #ed6a88;
+}
+main > section[event] div[body] > div[list] > ul li span[value] a,
+main > section[business-hours] div[body] > div[list] > ul li span[value] a,
+main > section[price] div[body] > div[list] > ul li span[value] a,
+main > section[stores] div[body] > div[list] > ul li span[value] a {
+  color: #FFD700;
+}
+main > section[event] div[body] > div[list] > ul li span[value][blue] a,
+main > section[business-hours] div[body] > div[list] > ul li span[value][blue] a,
+main > section[price] div[body] > div[list] > ul li span[value][blue] a,
+main > section[stores] div[body] > div[list] > ul li span[value][blue] a {
+  color: #4cadd3;
+}
+main > section[event] div[body] p a,
+main > section[business-hours] div[body] p a,
+main > section[price] div[body] p a,
+main > section[stores] div[body] p a {
+  color: #FFD700;
+}
+
+section[images] div[body] div[images] img {
+  width: 100%;
+}
+
+body > div[modals] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 1em;
+  z-index: 1004;
+  display: none;
+}
+body > div[modals][show] {
+  display: block;
+}
+body > div[modals] > div[modal] {
+  margin: 10em auto 1em auto;
+  padding: 1em;
+  border: 1px solid #35363a;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  background: #202124;
+  position: relative;
+  display: none;
+}
+body > div[modals] > div[modal][show] {
+  display: block;
+}
+body > div[modals] > div[modal] > div[header] {
+  position: absolute;
+  top: -2.5em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+body > div[modals] > div[modal] > div[header] h3 {
+  color: #ffffff;
+  font-size: 1.3em;
+}
+body > div[modals] > div[modal][calculator] > div[body] > div[price] > div[total] {
+  font-size: 1.3em;
+}
+body > div[modals] > div[modal][calculator] > div[body] > div[price] > div[total] span[text] {
+  color: #ffffff;
+}
+body > div[modals] > div[modal][calculator] > div[body] > div[price] > div[total] span[won],
+body > div[modals] > div[modal][calculator] > div[body] > div[price] > div[total] span[price] {
+  color: #cc8a66;
+}
+body > div[modals] > div[modal][calculator] > div[footer] {
+  margin-top: 1em;
+}
+
+footer {
+  text-align: center;
+  margin: 2em 0;
+  padding: 2em 1;
+  border-top: 1px solid #FFD700;
+  font-size: 0.9em;
+}
+footer > div[wrap] {
+  display: inline-block;
+  text-align: left;
+  padding: 2em 1em;
+}
+footer > div[wrap] > div {
+  margin-bottom: 1em;
+}
+footer > div[wrap] > div:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  body > main > section[width-fixed] {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
